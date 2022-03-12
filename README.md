@@ -3,7 +3,7 @@
 
 ![Ventana principal](https://user-images.githubusercontent.com/19848495/155704433-580123a7-2d19-4cb1-a51f-2b15db5260d9.png)
 
-## Una herramienta muy simple que te permite personalizar un nombre o palabra en particular.
+## Una utilidad irrelevante que te permite personalizar un nombre o palabra en particular.
 
 
 ### Requisitos para ejecutar Nomlyzer
