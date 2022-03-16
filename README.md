@@ -23,4 +23,4 @@ Nomlyzer se aloja bajo la licencia [Apache License 2.0](https://www.apache.org/l
 
 [Telegram](https://t.me/elstef41)
 
-[Blog](https://elstef41.cf)
+[Blog](https://elstef41.com)
