@@ -36,6 +36,12 @@
             this.nom = new System.Windows.Forms.Label();
             this.capitob = new System.Windows.Forms.Button();
             this.DescGroup = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tcMD5 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tcSHA1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tInMay = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tMin = new System.Windows.Forms.TextBox();
             this.tMay = new System.Windows.Forms.TextBox();
@@ -65,9 +71,10 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repositorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label11 = new System.Windows.Forms.Label();
-            this.licenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DescGroup.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +90,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 95);
+            this.button1.Location = new System.Drawing.Point(17, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -123,6 +130,12 @@
             // 
             // DescGroup
             // 
+            this.DescGroup.Controls.Add(this.label14);
+            this.DescGroup.Controls.Add(this.tcMD5);
+            this.DescGroup.Controls.Add(this.label13);
+            this.DescGroup.Controls.Add(this.tcSHA1);
+            this.DescGroup.Controls.Add(this.label12);
+            this.DescGroup.Controls.Add(this.tInMay);
             this.DescGroup.Controls.Add(this.label10);
             this.DescGroup.Controls.Add(this.tMin);
             this.DescGroup.Controls.Add(this.tMay);
@@ -145,6 +158,63 @@
             this.DescGroup.TabIndex = 6;
             this.DescGroup.TabStop = false;
             this.DescGroup.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(328, 132);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(105, 13);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Encriptado con MD5";
+            // 
+            // tcMD5
+            // 
+            this.tcMD5.BackColor = System.Drawing.Color.White;
+            this.tcMD5.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tcMD5.Location = new System.Drawing.Point(439, 128);
+            this.tcMD5.Name = "tcMD5";
+            this.tcMD5.ReadOnly = true;
+            this.tcMD5.Size = new System.Drawing.Size(184, 20);
+            this.tcMD5.TabIndex = 20;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(328, 105);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Encriptado con SHA1";
+            // 
+            // tcSHA1
+            // 
+            this.tcSHA1.BackColor = System.Drawing.Color.White;
+            this.tcSHA1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tcSHA1.Location = new System.Drawing.Point(439, 102);
+            this.tcSHA1.Name = "tcSHA1";
+            this.tcSHA1.ReadOnly = true;
+            this.tcSHA1.Size = new System.Drawing.Size(184, 20);
+            this.tcSHA1.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(328, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 13);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Inicial en mayúsculas";
+            // 
+            // tInMay
+            // 
+            this.tInMay.BackColor = System.Drawing.Color.White;
+            this.tInMay.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tInMay.Location = new System.Drawing.Point(439, 72);
+            this.tInMay.Name = "tInMay";
+            this.tInMay.ReadOnly = true;
+            this.tInMay.Size = new System.Drawing.Size(184, 20);
+            this.tInMay.TabIndex = 16;
             // 
             // label10
             // 
@@ -333,20 +403,19 @@
             this.inicio.TabIndex = 10;
             this.inicio.Text = "&Inicio";
             this.inicio.UseVisualStyleBackColor = true;
-            this.inicio.Visible = false;
             this.inicio.Click += new System.EventHandler(this.inicio_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.AutoSize = true;
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(237, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 23);
             this.button2.TabIndex = 12;
             this.button2.Text = "Historial";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // contextMenuStrip1
@@ -400,6 +469,7 @@
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.repositorioToolStripMenuItem,
             this.licenciaToolStripMenuItem,
+            this.toolStripSeparator2,
             this.acercaDeToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
@@ -411,6 +481,18 @@
             this.repositorioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.repositorioToolStripMenuItem.Text = "&Repositorio";
             this.repositorioToolStripMenuItem.Click += new System.EventHandler(this.repositorioToolStripMenuItem_Click);
+            // 
+            // licenciaToolStripMenuItem
+            // 
+            this.licenciaToolStripMenuItem.Name = "licenciaToolStripMenuItem";
+            this.licenciaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.licenciaToolStripMenuItem.Text = "&Licencia";
+            this.licenciaToolStripMenuItem.Click += new System.EventHandler(this.licenciaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -427,13 +509,6 @@
             this.label11.Size = new System.Drawing.Size(93, 13);
             this.label11.TabIndex = 16;
             this.label11.Text = "Contador de letras";
-            // 
-            // licenciaToolStripMenuItem
-            // 
-            this.licenciaToolStripMenuItem.Name = "licenciaToolStripMenuItem";
-            this.licenciaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.licenciaToolStripMenuItem.Text = "&Licencia";
-            this.licenciaToolStripMenuItem.Click += new System.EventHandler(this.licenciaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -509,6 +584,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStripMenuItem licenciaToolStripMenuItem;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tInMay;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tcMD5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tcSHA1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 
     }
 }

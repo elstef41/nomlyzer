@@ -70,7 +70,6 @@
             this.linkLabel2.TabIndex = 20;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "YouTube";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked_1);
             // 
             // linkLabel1
             // 
@@ -222,7 +221,6 @@
             this.MinimizeBox = false;
             this.Name = "AcercaDe";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.AcercaDe_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AcercaDe_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

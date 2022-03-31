@@ -41,7 +41,17 @@ namespace Nomlyzer
 
         private void button3_Click(object sender, EventArgs e)
         {
+            listaNom1.Clear();
             NombresLista.Items.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NombresLista.Items.Clear();
+            foreach (var item in listaNom1)
+            {
+                NombresLista.Items.Add(item);
+            }
         }
     }
 }

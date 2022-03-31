@@ -35,7 +35,7 @@ namespace Nomlyzer
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://elstef41.cf/");
+            System.Diagnostics.Process.Start("https://elstef41.com/");
         }
 
         private void AcercaDe_KeyPress(object sender, KeyPressEventArgs e)
@@ -46,24 +46,10 @@ namespace Nomlyzer
             }
         }
 
-        private void AcercaDe_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
     }
 }

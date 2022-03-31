@@ -8,6 +8,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
 
 namespace Nomlyzer
 {
@@ -109,6 +110,15 @@ namespace Nomlyzer
                 DescGroup.Visible = true;
                 String NomNoCons = Regex.Replace(Nombre, "[zxcvbsdmnfghjklñqwrtpZXCVBSDMNFGHJKLÑQWRTP]", "");
                 String NomNoVocs = Regex.Replace(Nombre, "[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
+                String NomInMay = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Nombre.ToLower());
+                var sha1 = new System.Security.Cryptography.SHA1Managed();
+                byte[] tData = System.Text.Encoding.UTF8.GetBytes(Nombre);
+                byte[] hash = sha1.ComputeHash(tData);
+                string NomSha1 = BitConverter.ToString(hash).Replace("-", String.Empty);
+                var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+                byte[] tData2 = System.Text.Encoding.UTF8.GetBytes(Nombre);
+                byte[] hash2 = md5.ComputeHash(tData2);
+                string NomMd5 = BitConverter.ToString(hash2).Replace("-", String.Empty);
                 String NomConNums = Nombre.Replace("A", "4").Replace("a", "4").Replace("Á", "4").Replace("á", "4").Replace("E", "3").Replace("e", "3").Replace("É", "3").Replace("é", "3").Replace("I", "1").Replace("i", "1").Replace("Í", "1").Replace("í", "1").Replace("O", "0").Replace("o", "0").Replace("Ó", "0").Replace("ó", "0");
                 String textBur = Regex.Replace(Nombre, "a", "ᴀ")
                                       .Replace("e", "ᴇ")
@@ -132,15 +142,22 @@ namespace Nomlyzer
                 String textMin = Nombre.ToLower();
                 NoCons.Text = NomNoCons;
                 NoVocs.Text = NomNoVocs;
+                tcSHA1.Text = NomSha1;
+                tcMD5.Text = NomMd5;
                 label11.Text = Nombre.Length + " caracteres (" + NomNoCons.Length + " vocales y " + NomNoVocs.Length + " consonantes).";
                 ConNums.Text = NomConNums;
                 nomBur.Text = textBur;
                 nomBur.Text = textBur;
                 tMay.Text = textMay;
                 tMin.Text = textMin;
+                tInMay.Text = NomInMay;
                 button2.Visible = true;
                 historialToolStripMenuItem.Enabled = true;
                 nomVes.Text = ReverseString(Nombre);
+                if (!button2.Enabled)
+                {
+                    button2.Enabled = true;
+                }
             }
         }
 
