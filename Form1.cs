@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
+using System.Web;
 
 namespace Nomlyzer
 {
@@ -40,7 +41,6 @@ namespace Nomlyzer
         {
             Nombre = NomBox.Text;
             int NomCar = NomBox.TextLength;
-            int result;
             if (Nombre == "")
             {
                 MessageBox.Show("El cuadro del nombre no puede estar vacío. ¿No crees?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,7 +62,7 @@ namespace Nomlyzer
                 /* Guardar dato para introducirlo en el historial */
                 listaNom.Add(Nombre);
                 /* Cambia la estructura del formulario */
-                this.Width = 665;
+                this.Width = 688;
                 this.Height = 400;
                 inicio.Visible = true;
                 label3.Visible = false;
@@ -111,13 +111,19 @@ namespace Nomlyzer
                 String NomNoCons = Regex.Replace(Nombre, "[zxcvbsdmnfghjklñqwrtpZXCVBSDMNFGHJKLÑQWRTP]", "");
                 String NomNoVocs = Regex.Replace(Nombre, "[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
                 String NomInMay = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Nombre.ToLower());
+                String urlcoded = HttpUtility.UrlEncode(Nombre);
+                String htmlcoded = HttpUtility.HtmlEncode(Nombre);
                 var sha1 = new System.Security.Cryptography.SHA1Managed();
-                byte[] tData = System.Text.Encoding.UTF8.GetBytes(Nombre);
-                byte[] hash = sha1.ComputeHash(tData);
-                string NomSha1 = BitConverter.ToString(hash).Replace("-", String.Empty);
+                var sha256 = new System.Security.Cryptography.SHA256Managed();
                 var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+                byte[] tData = System.Text.Encoding.UTF8.GetBytes(Nombre);
                 byte[] tData2 = System.Text.Encoding.UTF8.GetBytes(Nombre);
-                byte[] hash2 = md5.ComputeHash(tData2);
+                byte[] tData3 = System.Text.Encoding.UTF8.GetBytes(Nombre);
+                byte[] hash = sha1.ComputeHash(tData);
+                byte[] hash256 = sha256.ComputeHash(tData2);
+                byte[] hash2 = md5.ComputeHash(tData3);
+                string NomSha1 = BitConverter.ToString(hash).Replace("-", String.Empty);
+                string NomSha256 = BitConverter.ToString(hash256).Replace("-", String.Empty);
                 string NomMd5 = BitConverter.ToString(hash2).Replace("-", String.Empty);
                 String NomConNums = Nombre.Replace("A", "4").Replace("a", "4").Replace("Á", "4").Replace("á", "4").Replace("E", "3").Replace("e", "3").Replace("É", "3").Replace("é", "3").Replace("I", "1").Replace("i", "1").Replace("Í", "1").Replace("í", "1").Replace("O", "0").Replace("o", "0").Replace("Ó", "0").Replace("ó", "0");
                 String textBur = Regex.Replace(Nombre, "a", "ᴀ")
@@ -144,6 +150,9 @@ namespace Nomlyzer
                 NoVocs.Text = NomNoVocs;
                 tcSHA1.Text = NomSha1;
                 tcMD5.Text = NomMd5;
+                tcSHA256.Text = NomSha256;
+                tcURLc.Text = urlcoded;
+                tcHTMLc.Text = htmlcoded;
                 label11.Text = Nombre.Length + " caracteres (" + NomNoCons.Length + " vocales y " + NomNoVocs.Length + " consonantes).";
                 ConNums.Text = NomConNums;
                 nomBur.Text = textBur;

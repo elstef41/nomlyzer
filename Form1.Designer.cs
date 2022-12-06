@@ -36,6 +36,12 @@
             this.nom = new System.Windows.Forms.Label();
             this.capitob = new System.Windows.Forms.Button();
             this.DescGroup = new System.Windows.Forms.GroupBox();
+            this.tcHTMLc = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tcURLc = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tcSHA256 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tcMD5 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -130,6 +136,12 @@
             // 
             // DescGroup
             // 
+            this.DescGroup.Controls.Add(this.tcHTMLc);
+            this.DescGroup.Controls.Add(this.label17);
+            this.DescGroup.Controls.Add(this.tcURLc);
+            this.DescGroup.Controls.Add(this.label16);
+            this.DescGroup.Controls.Add(this.tcSHA256);
+            this.DescGroup.Controls.Add(this.label15);
             this.DescGroup.Controls.Add(this.label14);
             this.DescGroup.Controls.Add(this.tcMD5);
             this.DescGroup.Controls.Add(this.label13);
@@ -154,15 +166,70 @@
             this.DescGroup.Controls.Add(this.label2);
             this.DescGroup.Location = new System.Drawing.Point(16, 81);
             this.DescGroup.Name = "DescGroup";
-            this.DescGroup.Size = new System.Drawing.Size(631, 208);
+            this.DescGroup.Size = new System.Drawing.Size(650, 211);
             this.DescGroup.TabIndex = 6;
             this.DescGroup.TabStop = false;
             this.DescGroup.Visible = false;
             // 
+            // tcHTMLc
+            // 
+            this.tcHTMLc.BackColor = System.Drawing.Color.White;
+            this.tcHTMLc.Location = new System.Drawing.Point(138, 182);
+            this.tcHTMLc.Name = "tcHTMLc";
+            this.tcHTMLc.ReadOnly = true;
+            this.tcHTMLc.Size = new System.Drawing.Size(184, 20);
+            this.tcHTMLc.TabIndex = 27;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(13, 185);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 13);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Codificación HTML";
+            // 
+            // tcURLc
+            // 
+            this.tcURLc.BackColor = System.Drawing.Color.White;
+            this.tcURLc.Location = new System.Drawing.Point(453, 182);
+            this.tcURLc.Name = "tcURLc";
+            this.tcURLc.ReadOnly = true;
+            this.tcURLc.Size = new System.Drawing.Size(184, 20);
+            this.tcURLc.TabIndex = 25;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(330, 185);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(90, 13);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Codificación URL";
+            // 
+            // tcSHA256
+            // 
+            this.tcSHA256.BackColor = System.Drawing.Color.White;
+            this.tcSHA256.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tcSHA256.Location = new System.Drawing.Point(453, 128);
+            this.tcSHA256.Name = "tcSHA256";
+            this.tcSHA256.ReadOnly = true;
+            this.tcSHA256.Size = new System.Drawing.Size(184, 20);
+            this.tcSHA256.TabIndex = 23;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(328, 132);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(122, 13);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Encriptado con SHA256";
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(328, 132);
+            this.label14.Location = new System.Drawing.Point(328, 159);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(105, 13);
             this.label14.TabIndex = 21;
@@ -172,7 +239,7 @@
             // 
             this.tcMD5.BackColor = System.Drawing.Color.White;
             this.tcMD5.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tcMD5.Location = new System.Drawing.Point(439, 128);
+            this.tcMD5.Location = new System.Drawing.Point(453, 156);
             this.tcMD5.Name = "tcMD5";
             this.tcMD5.ReadOnly = true;
             this.tcMD5.Size = new System.Drawing.Size(184, 20);
@@ -191,7 +258,7 @@
             // 
             this.tcSHA1.BackColor = System.Drawing.Color.White;
             this.tcSHA1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tcSHA1.Location = new System.Drawing.Point(439, 102);
+            this.tcSHA1.Location = new System.Drawing.Point(453, 102);
             this.tcSHA1.Name = "tcSHA1";
             this.tcSHA1.ReadOnly = true;
             this.tcSHA1.Size = new System.Drawing.Size(184, 20);
@@ -210,7 +277,7 @@
             // 
             this.tInMay.BackColor = System.Drawing.Color.White;
             this.tInMay.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tInMay.Location = new System.Drawing.Point(439, 72);
+            this.tInMay.Location = new System.Drawing.Point(453, 75);
             this.tInMay.Name = "tInMay";
             this.tInMay.ReadOnly = true;
             this.tInMay.Size = new System.Drawing.Size(184, 20);
@@ -229,7 +296,7 @@
             // 
             this.tMin.BackColor = System.Drawing.Color.White;
             this.tMin.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tMin.Location = new System.Drawing.Point(439, 44);
+            this.tMin.Location = new System.Drawing.Point(453, 49);
             this.tMin.Name = "tMin";
             this.tMin.ReadOnly = true;
             this.tMin.Size = new System.Drawing.Size(184, 20);
@@ -239,7 +306,7 @@
             // 
             this.tMay.BackColor = System.Drawing.Color.White;
             this.tMay.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tMay.Location = new System.Drawing.Point(439, 16);
+            this.tMay.Location = new System.Drawing.Point(453, 22);
             this.tMay.Name = "tMay";
             this.tMay.ReadOnly = true;
             this.tMay.Size = new System.Drawing.Size(184, 20);
@@ -266,7 +333,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 153);
+            this.label8.Location = new System.Drawing.Point(12, 152);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 10;
@@ -329,7 +396,7 @@
             // NoCons
             // 
             this.NoCons.BackColor = System.Drawing.SystemColors.Window;
-            this.NoCons.Location = new System.Drawing.Point(138, 45);
+            this.NoCons.Location = new System.Drawing.Point(138, 44);
             this.NoCons.Name = "NoCons";
             this.NoCons.ReadOnly = true;
             this.NoCons.Size = new System.Drawing.Size(184, 20);
@@ -388,7 +455,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 300);
+            this.label7.Location = new System.Drawing.Point(29, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 9;
@@ -397,11 +464,11 @@
             // 
             // inicio
             // 
-            this.inicio.Location = new System.Drawing.Point(483, 335);
+            this.inicio.Location = new System.Drawing.Point(493, 335);
             this.inicio.Name = "inicio";
             this.inicio.Size = new System.Drawing.Size(73, 23);
             this.inicio.TabIndex = 10;
-            this.inicio.Text = "&Inicio";
+            this.inicio.Text = "&Regresar";
             this.inicio.UseVisualStyleBackColor = true;
             this.inicio.Click += new System.EventHandler(this.inicio_Click);
             // 
@@ -448,19 +515,19 @@
             // 
             this.historialToolStripMenuItem.Enabled = false;
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.historialToolStripMenuItem.Text = "&Historial";
             this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -478,33 +545,33 @@
             // repositorioToolStripMenuItem
             // 
             this.repositorioToolStripMenuItem.Name = "repositorioToolStripMenuItem";
-            this.repositorioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.repositorioToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.repositorioToolStripMenuItem.Text = "&Repositorio";
             this.repositorioToolStripMenuItem.Click += new System.EventHandler(this.repositorioToolStripMenuItem_Click);
             // 
             // licenciaToolStripMenuItem
             // 
             this.licenciaToolStripMenuItem.Name = "licenciaToolStripMenuItem";
-            this.licenciaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.licenciaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.licenciaToolStripMenuItem.Text = "&Licencia";
             this.licenciaToolStripMenuItem.Click += new System.EventHandler(this.licenciaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.acercaDeToolStripMenuItem.Text = "&Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(409, 300);
+            this.label11.Location = new System.Drawing.Point(271, 315);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 13);
             this.label11.TabIndex = 16;
@@ -591,6 +658,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tcSHA1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.TextBox tcSHA256;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tcURLc;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tcHTMLc;
+        private System.Windows.Forms.Label label17;
 
     }
 }

@@ -74,10 +74,7 @@
       <HintPath>..\..\..\Windows API Code Pack 1.1\binaries\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -179,7 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon1.ico" />
-    <Content Include="registro.txt" />
     <None Include="Resources\registro.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
