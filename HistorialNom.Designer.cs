@@ -93,6 +93,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NombresLista);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HistorialNom";

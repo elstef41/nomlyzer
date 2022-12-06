@@ -88,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 34);
+            this.label1.Location = new System.Drawing.Point(19, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 0;
@@ -106,9 +106,9 @@
             // 
             // NomBox
             // 
-            this.NomBox.Location = new System.Drawing.Point(123, 31);
+            this.NomBox.Location = new System.Drawing.Point(123, 34);
             this.NomBox.Name = "NomBox";
-            this.NomBox.Size = new System.Drawing.Size(164, 20);
+            this.NomBox.Size = new System.Drawing.Size(187, 20);
             this.NomBox.TabIndex = 2;
             // 
             // nom
@@ -433,7 +433,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 57);
+            this.label3.Location = new System.Drawing.Point(19, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 7;
@@ -446,10 +446,10 @@
             this.genc.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.genc.Location = new System.Drawing.Point(123, 54);
+            this.genc.Location = new System.Drawing.Point(123, 57);
             this.genc.Name = "genc";
             this.genc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.genc.Size = new System.Drawing.Size(164, 21);
+            this.genc.Size = new System.Drawing.Size(109, 21);
             this.genc.TabIndex = 8;
             // 
             // label7
