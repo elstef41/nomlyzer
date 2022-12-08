@@ -1,7 +1,7 @@
 # Nomlyzer
 [![Lanzamiento actual](https://img.shields.io/github/v/release/elstef41/nomlyzer?include_prereleases)](https://github.com/elstef41/nomlyzer/releases)
 
-![Ventana principal](https://user-images.githubusercontent.com/19848495/163756808-d1f6d3c7-f92d-4ae4-b4b9-fb09949e20f8.png)
+![Ventana principal](https://user-images.githubusercontent.com/19848495/206342683-7ea7477b-b516-4f6d-ad31-7122e4815c62.png)
 
 ## Una utilidad irrelevante que te permite personalizar un nombre o palabra en particular.
 Nomlyzer es el resultado de algo que fui haciendo durante mis tiempos de aburrimiento. Para que no quedara en el olvido, opté por publicarlo. Y siendo sincero, no tenía tan poca utilidad después de todo. 
